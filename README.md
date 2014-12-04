@@ -29,3 +29,6 @@ where
 
 `error` is a callback method, which will be called when showing notification fails.
 
+## Screenshot
+
+![StatusBarNotification Screenshot](https://raw.githubusercontent.com/darkgeek/Phonegap-StatusBarNotification-Plugin/master/screenshot.png)
