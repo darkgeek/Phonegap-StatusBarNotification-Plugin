@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="edu.hdu.darkgeek.cordova.notification" version="0.0.1" 
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>StatusBarNotification</name>
+    <description>Notify users with messages shown on StatusBar</description>
+    <js-module name="StatusBarNotification" src="www/StatusBarNotification.js">
+        <clobbers target="cordova.plugins.StatusBarNotification"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="StatusBarNotification">
+                <param name="android-package" value="edu.hdu.darkgeek.cordova.notification.StatusBarNotification"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+        </config-file>
+        <source-file src="src/android/StatusBarNotification.java" target-dir="src/edu/hdu/darkgeek/cordova/notification/"/>
+    </platform>
+</plugin>
