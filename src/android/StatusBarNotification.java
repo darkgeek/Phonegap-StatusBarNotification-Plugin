@@ -35,9 +35,6 @@ public class StatusBarNotification extends CordovaPlugin {
             String ticker = args.getString(2);
             boolean enableExtraEffects = args.getBoolean(3);
             
-            Log.d(TAG, "=================enableExtraEffects: " + enableExtraEffects);
-
-
             Activity activity = this.cordova.getActivity();
             Context context = activity.getApplicationContext();
             Intent intent = new Intent(context, activity.getClass());
